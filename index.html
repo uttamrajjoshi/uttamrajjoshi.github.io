@@ -4,63 +4,285 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Official academic and professional portfolio of Uttam Raj Joshi, Public Health student and health professional from Nepal.">
-<title>Uttam Raj Joshi | Academic Portfolio</title>
+<meta name="description" content="Professional portfolio of Uttam Raj Joshi, Health Assistant and Bachelor of Public Health student.">
+<title>Uttam Raj Joshi | Health & Public Health</title>
 
 <style>
 :root {
-  --navy:#102b46;
-  --blue:#244f70;
-  --gold:#bd9a5b;
-  --light:#f5f7fa;
-  --text:#263445;
-  --muted:#687789;
+  --blue: #1456a0;
+  --dark: #102b49;
+  --light: #f3f7fc;
+  --white: #ffffff;
+  --text: #34445a;
 }
-*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.7}
-a{text-decoration:none;color:inherit}
-header{background:#fff;border-bottom:1px solid #e8edf2;position:sticky;top:0;z-index:10}
-nav{max-width:1120px;margin:auto;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:15px}
-.logo{font-size:19px;font-weight:bold;color:var(--navy)}
-nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
-nav ul a{font-size:13px;color:#536477}
-nav ul a:hover{color:var(--gold)}
-.hero{background:linear-gradient(120deg,#102b46,#244f70);color:white;padding:85px 22px}
-.hero-inner{max-width:1050px;margin:auto;display:flex;align-items:center;gap:55px}
-.portrait{width:210px;height:245px;border:3px solid var(--gold);border-radius:12px;display:flex;align-items:center;justify-content:center;background:#ffffff15;flex-shrink:0;overflow:hidden}
-.portrait img{width:100%;height:100%;object-fit:cover}
-.initials{font-size:65px;color:white;font-weight:bold}
-.hero h1{font-size:42px;line-height:1.2;margin-bottom:12px}
-.hero h2{font-size:18px;font-weight:400;color:#e1eaf2;margin-bottom:18px}
-.hero p{max-width:650px;color:#e1eaf2}
-.tag{display:inline-block;margin-top:22px;padding:7px 14px;border:1px solid #ffffff70;border-radius:30px;font-size:12px}
-.btn{display:inline-block;background:var(--gold);color:#102b46;padding:11px 21px;border-radius:5px;font-weight:bold;margin-top:24px;font-size:14px}
-section{padding:68px 22px}
-.container{max-width:1000px;margin:auto}
-.section-title{font-size:28px;color:var(--navy);margin-bottom:9px}
-.underline{width:55px;height:3px;background:var(--gold);margin-bottom:27px}
-.intro{font-size:16px;color:#526174;max-width:850px}
-.light{background:var(--light)}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.card{background:white;border:1px solid #e8edf2;border-radius:9px;padding:22px}
-.card h3{color:var(--navy);font-size:17px;margin-bottom:7px}
-.card p,.card li{font-size:14px;color:var(--muted)}
-.card ul{padding-left:20px;margin-top:8px}
-.year{color:#a17c40;font-size:12px;font-weight:bold;letter-spacing:1px}
-.timeline{border-left:2px solid var(--gold);padding-left:22px;margin:18px 0}
-.timeline .card{margin-bottom:18px}
-footer{background:#102b46;color:#dbe5ee;text-align:center;padding:32px 20px;font-size:13px}
-footer p{margin:5px}
-footer a{color:#e5c48d}
-@media(max-width:700px){
- nav{align-items:flex-start;flex-direction:column}
- nav ul{gap:12px}
- .hero{padding:55px 20px}
- .hero-inner{flex-direction:column;align-items:flex-start;gap:25px}
- .hero h1{font-size:34px}
- .portrait{width:170px;height:195px}
- .grid{grid-template-columns:1fr}
- section{padding:48px 20px}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+header {
+  background: var(--white);
+  padding: 16px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 12px #102b4912;
+}
+
+.logo {
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+}
+
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+.menu-button {
+  display: none;
+  border: 0;
+  background: none;
+  font-size: 25px;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 570px;
+  padding: 75px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 65px;
+  background: linear-gradient(120deg, #eaf3ff, #ffffff);
+}
+
+.hero-text {
+  max-width: 580px;
+}
+
+.hero-text .tag {
+  color: var(--blue);
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.hero h1 {
+  color: var(--dark);
+  font-size: clamp(35px, 5vw, 54px);
+  line-height: 1.2;
+  margin: 14px 0;
+}
+
+.hero h2 {
+  color: var(--blue);
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 540px;
+}
+
+.portrait {
+  width: 270px;
+  height: 330px;
+  flex-shrink: 0;
+  border: 8px solid white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px #102b4920;
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 11px 23px;
+  background: var(--blue);
+  color: white;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: var(--dark);
+}
+
+section {
+  padding: 70px 9%;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--dark);
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 4px;
+  background: var(--blue);
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.content {
+  max-width: 950px;
+  margin: auto;
+}
+
+.about-text {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px #102b490d;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border-top: 4px solid var(--blue);
+  box-shadow: 0 4px 18px #102b490d;
+}
+
+.card h3 {
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 7px;
+}
+
+.experience {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 5px solid var(--blue);
+}
+
+.experience h3 {
+  color: var(--dark);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin: 7px 0;
+}
+
+#contact {
+  background: #eaf3ff;
+}
+
+.contact-box {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.contact-box a {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 22px;
+  font-size: 14px;
+}
+
+@media (max-width: 750px) {
+  header {
+    padding: 14px 5%;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px 7%;
+    box-shadow: 0 8px 12px #102b4912;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 55px 7%;
+    gap: 30px;
+  }
+
+  .portrait {
+    width: 220px;
+    height: 270px;
+  }
+
+  section {
+    padding: 55px 6%;
+  }
 }
 </style>
 </head>
@@ -68,196 +290,184 @@ footer a{color:#e5c48d}
 <body>
 
 <header>
-<nav>
-<a class="logo" href="#home">UTTAM RAJ JOSHI</a>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#interests">Interests</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
+  <div class="logo">Uttam Raj Joshi</div>
+  <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+  <nav id="navigation">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#education" onclick="closeMenu()">Education</a>
+    <a href="#experience" onclick="closeMenu()">Experience</a>
+    <a href="#skills" onclick="closeMenu()">Skills</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </nav>
 </header>
 
 <main>
-<div class="hero" id="home">
-<div class="hero-inner">
+<section class="hero" id="home">
+  <div class="hero-text">
+    <div class="tag">Healthcare | Emergency Medicine | Public Health</div>
+    <h1>Uttam Raj Joshi</h1>
+    <h2>Health Assistant | Public Health Student</h2>
+    <p>
+      Healthcare professional with experience in emergency medicine,
+      clinical care and an ongoing academic journey in public health.
+      Interested in strengthening healthcare systems and improving
+      community health.
+    </p>
+    <a class="button" href="#about">Explore My Profile</a>
+  </div>
 
   <div class="portrait">
-<img src="IMG_20260828_093524.jpg" alt="Uttam Raj Joshi">
-</div>
-
-<div>
-
-<div>
-<p class="year">ACADEMIC & PROFESSIONAL PORTFOLIO</p>
-<h1>Uttam Raj Joshi</h1>
-<h2>Public Health Student | Health Professional</h2>
-<p>
-A health professional with experience in emergency healthcare
-and a growing academic interest in public health, community
-health and healthcare systems.
-</p>
-<span class="tag">Nepal</span><br>
-<a href="#about" class="btn">Explore My Profile →</a>
-</div>
-
-</div>
-</div>
-
-<section id="about">
-<div class="container">
-<h2 class="section-title">About Me</h2>
-<div class="underline"></div>
-<p class="intro">
-I am Uttam Raj Joshi, a health professional and Bachelor of
-Public Health (BPH) student at the Central Department of
-Public Health, Institute of Medicine, Tribhuvan University,
-Nepal, pursuing my studies on a full scholarship.
-<br><br>
-My professional journey includes experience in the
-Department of Emergency Medicine at Tribhuvan University
-Teaching Hospital, Kathmandu. This experience has helped
-shape my understanding of patient care, emergency services
-and the importance of accessible, quality healthcare.
-<br><br>
-I am committed to continuous learning and to contributing
-to public health through education, research and community
-health initiatives.
-</p>
-</div>
+    <img src="IMG_20260828_093524.jpg" alt="Uttam Raj Joshi">
+  </div>
 </section>
 
-<section class="light" id="education">
-<div class="container">
-<h2 class="section-title">Education & Qualifications</h2>
-<div class="underline"></div>
-<div class="grid">
+<section id="about">
+  <div class="content">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-text">
+      <p>
+        I am a Health Assistant with professional experience in the
+        Emergency Medicine Department at Tribhuvan University Teaching
+        Hospital, Kathmandu. My clinical background has provided exposure
+        to emergency and trauma care, patient assessment and hospital-based
+        healthcare services.
+      </p>
+      <p>
+        I am currently pursuing a Bachelor of Public Health at the
+        Institute of Medicine, Tribhuvan University, with an interest
+        in epidemiology, health systems, emergency preparedness and
+        community health.
+      </p>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<span class="year">CURRENT STUDY</span>
-<h3>Bachelor of Public Health (BPH)</h3>
-<p>Central Department of Public Health (CDPH), Institute of Medicine, Tribhuvan University.</p>
-<p>Full Scholarship Awardee.</p>
-</div>
+<section id="education">
+  <div class="content">
+    <h2 class="section-title">Education & Qualifications</h2>
+    <div class="cards">
 
-<div class="card">
-<h3>Master of Education (M.Ed.) in Health</h3>
-<p>Tribhuvan University, Nepal.</p>
-</div>
+      <div class="card">
+        <h3>Bachelor of Public Health (BPH)</h3>
+        <p>Institute of Medicine (IOM)</p>
+        <p>Tribhuvan University</p>
+        <p><strong>Status:</strong> Ongoing</p>
+      </div>
 
-<div class="card">
-<h3>Bachelor of Education (B.Ed.) in Health</h3>
-<p>Tribhuvan University, Nepal.</p>
-</div>
+      <div class="card">
+        <h3>PCL in General Medicine</h3>
+        <p>Vinayak College of Health Science, Kathmandu</p>
+        <p><strong>Result:</strong> 88.27% (Distinction)</p>
+      </div>
 
-<div class="card">
-<h3>PCL in General Medicine</h3>
-<p>CTEVT, Nepal.</p>
-<p>Health Assistant qualification.</p>
-</div>
+      <div class="card">
+        <h3>Community Medical Assistant (CMA)</h3>
+        <p>18-month training programme</p>
+      </div>
 
-<div class="card">
-<h3>Community Medical Assistant</h3>
-<p>CTEVT, Nepal.</p>
-</div>
+      <div class="card">
+        <h3>Science Education</h3>
+        <p>NEB curriculum</p>
+        <p>Viswa Niketan, Kathmandu</p>
+      </div>
 
-<div class="card">
-<h3>Additional Qualifications</h3>
-<ul>
-<li>PRC, NEB</li>
-<li>American Heart Association (AHA) BLS training</li>
-<li>American Heart Association (AHA) ACLS training</li>
-</ul>
-</div>
+    </div>
 
-</div>
-</div>
+    <div class="about-text" style="margin-top:22px">
+      <h3 style="color:#1456a0">Professional Registration & Training</h3>
+      <ul>
+        <li>NHPC registration as Health Assistant and CMA</li>
+        <li>American Heart Association (AHA) BLS training</li>
+        <li>Advanced Cardiovascular Life Support (ACLS) training</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section id="experience">
-<div class="container">
-<h2 class="section-title">Professional Experience</h2>
-<div class="underline"></div>
-
-<div class="timeline">
-<div class="card">
-<span class="year">PROFESSIONAL EXPERIENCE</span>
-<h3>Health Assistant</h3>
-<p><strong>Department of Emergency Medicine</strong></p>
-<p>Tribhuvan University Teaching Hospital (TUTH), Kathmandu, Nepal.</p>
-<p>
-Worked in a high-volume tertiary referral emergency
-department, gaining experience in emergency patient
-assessment, triage, wound management, suturing,
-splinting, IV cannulation and assisting with
-resuscitation and airway management.
-</p>
-<p>
-Also gained supervised exposure to bedside emergency
-ultrasonography, including eFAST.
-</p>
-</div>
-</div>
-</div>
+  <div class="content">
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="experience">
+      <h3>Health Assistant</h3>
+      <p><strong>Emergency Medicine Department</strong></p>
+      <p>Tribhuvan University Teaching Hospital (TUTH), Maharajgunj, Kathmandu</p>
+      <p>
+        Experience in hospital-based emergency and trauma care,
+        supporting patient assessment, clinical procedures and
+        emergency department services.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section class="light" id="interests">
-<div class="container">
-<h2 class="section-title">Academic & Research Interests</h2>
-<div class="underline"></div>
-<div class="grid">
+<section id="skills">
+  <div class="content">
+    <h2 class="section-title">Clinical Skills & Interests</h2>
+    <div class="cards">
 
-<div class="card">
-<h3>Public Health</h3>
-<p>Population health, disease prevention and health promotion.</p>
-</div>
+      <div class="card">
+        <h3>Emergency & Trauma Care</h3>
+        <ul>
+          <li>Initial patient assessment</li>
+          <li>Emergency triage</li>
+          <li>Trauma care support</li>
+          <li>Basic resuscitation support</li>
+        </ul>
+      </div>
 
-<div class="card">
-<h3>Community Health</h3>
-<p>Community participation, primary healthcare and health education.</p>
-</div>
+      <div class="card">
+        <h3>Clinical Procedures</h3>
+        <ul>
+          <li>Wound management and suturing</li>
+          <li>Splinting and slab application</li>
+          <li>IV cannulation</li>
+          <li>Airway management support</li>
+          <li>eFAST exposure</li>
+        </ul>
+      </div>
 
-<div class="card">
-<h3>Emergency Healthcare</h3>
-<p>Emergency care, patient safety and quality healthcare services.</p>
-</div>
+      <div class="card">
+        <h3>Public Health Interests</h3>
+        <ul>
+          <li>Epidemiology and biostatistics</li>
+          <li>Emergency and disaster management</li>
+          <li>Health systems and policy</li>
+          <li>Community health</li>
+          <li>Research and health education</li>
+        </ul>
+      </div>
 
-<div class="card">
-<h3>Health Systems</h3>
-<p>Healthcare delivery, health policy and equitable access to healthcare.</p>
-</div>
-
-</div>
-</div>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
-<div class="container">
-<h2 class="section-title">Contact</h2>
-<div class="underline"></div>
-<p class="intro">
-Thank you for visiting my academic and professional
-portfolio. I welcome academic connections, knowledge
-sharing and professional collaboration.
-<br><br>
-For professional enquiries, please connect through my
-professional networks.
-</p>
-<p style="margin-top:20px">
-<strong>Website:</strong> uttamrajjoshi.com.np
-</p>
-</div>
+  <div class="content">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-box">
+      <p>For professional or academic enquiries, connect through my portfolio.</p>
+      <p style="margin-top:12px">
+        <a href="https://github.com/uttamrajjoshi">GitHub Profile</a>
+      </p>
+    </div>
+  </div>
 </section>
-
 </main>
 
 <footer>
-<p><strong>Uttam Raj Joshi</strong></p>
-<p>Academic & Professional Portfolio</p>
-<p>© 2026 Uttam Raj Joshi. All rights reserved.</p>
+  <p>© 2026 Uttam Raj Joshi. All rights reserved.</p>
 </footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navigation").classList.toggle("open");
+}
+
+function closeMenu() {
+  document.getElementById("navigation").classList.remove("open");
+}
+</script>
 
 </body>
 </html>
