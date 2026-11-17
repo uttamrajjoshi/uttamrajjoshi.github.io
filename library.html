@@ -1,12 +1,12 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Digital Library of Uttam Raj Joshi - Public Health study materials and academic resources.">
+<meta name="description" content="TU BPH and Public Health Digital Library of Uttam Raj Joshi.">
 <title>Digital Library | Uttam Raj Joshi</title>
+
 <style>
 :root {
   --blue:#1456a0;
@@ -15,7 +15,12 @@
   --white:#ffffff;
   --text:#34445a;
 }
-* {margin:0;padding:0;box-sizing:border-box;}
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
 body {
   font-family:Arial,sans-serif;
   background:var(--light);
@@ -29,20 +34,62 @@ header {
   justify-content:space-between;
   align-items:center;
   box-shadow:0 2px 12px #102b4912;
+  position:sticky;
+  top:0;
+  z-index:10;
 }
-.logo {color:var(--blue);font-size:20px;font-weight:bold;}
-header a {color:var(--dark);text-decoration:none;font-weight:bold;}
+.logo {
+  color:var(--blue);
+  font-size:20px;
+  font-weight:bold;
+}
+header a {
+  color:var(--dark);
+  text-decoration:none;
+  font-weight:bold;
+}
 .hero {
   text-align:center;
   padding:65px 7%;
-  background:linear-gradient(120deg,#eaf3ff,#fff);
+  background:linear-gradient(120deg,#eaf3ff,#ffffff);
 }
-.hero h1 {color:var(--dark);font-size:38px;margin-bottom:12px;}
-.hero p {max-width:650px;margin:auto;}
-section {padding:55px 8%;}
+.hero h1 {
+  color:var(--dark);
+  font-size:38px;
+  margin-bottom:12px;
+}
+.hero p {
+  max-width:750px;
+  margin:auto;
+}
+.hero-links {
+  margin-top:25px;
+}
+.button {
+  display:inline-block;
+  margin:6px;
+  padding:10px 20px;
+  background:var(--blue);
+  color:white;
+  text-decoration:none;
+  border-radius:7px;
+  font-weight:bold;
+}
+section {
+  padding:55px 8%;
+}
 .section-title {
-  text-align:center;color:var(--dark);
-  font-size:28px;margin-bottom:30px;
+  text-align:center;
+  color:var(--dark);
+  font-size:28px;
+  margin-bottom:30px;
+}
+.year-title {
+  color:var(--dark);
+  font-size:23px;
+  margin:38px 0 20px;
+  border-left:5px solid var(--blue);
+  padding-left:12px;
 }
 .cards {
   display:grid;
@@ -50,24 +97,52 @@ section {padding:55px 8%;}
   gap:20px;
 }
 .card {
-  background:white;padding:25px;border-radius:12px;
+  background:white;
+  padding:23px;
+  border-radius:12px;
   border-top:4px solid var(--blue);
   box-shadow:0 4px 18px #102b490d;
 }
-.card h3 {color:var(--blue);margin-bottom:10px;}
-.card p {margin-bottom:12px;}
-.status {color:#64748b;font-size:14px;}
-.button {
-  display:inline-block;margin-top:20px;padding:10px 20px;
-  background:var(--blue);color:white;text-decoration:none;
-  border-radius:7px;font-weight:bold;
+.card h3 {
+  color:var(--blue);
+  margin-bottom:10px;
+}
+.card p {
+  margin-bottom:8px;
+}
+.card ul {
+  padding-left:19px;
+}
+.card li {
+  margin:5px 0;
+}
+.status {
+  color:#64748b;
+  font-size:13px;
+  margin-top:12px;
+  font-style:italic;
+}
+.note {
+  background:#eaf3ff;
+  padding:20px;
+  border-radius:10px;
+  margin-top:25px;
 }
 footer {
-  background:var(--dark);color:white;text-align:center;
-  padding:22px;font-size:14px;
+  background:var(--dark);
+  color:white;
+  text-align:center;
+  padding:22px;
+  font-size:14px;
+}
+@media(max-width:600px) {
+  .hero h1 {font-size:30px;}
+  section {padding:40px 6%;}
+  header {padding:14px 5%;}
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -78,71 +153,489 @@ footer {
 <div class="hero">
   <h1>Digital Library</h1>
   <p>
-    A learning resource centre for students and public health
-    professionals, providing academic notes, reference materials
-    and educational resources.
+    A learning and knowledge-sharing platform for Bachelor of
+    Public Health students, public health professionals,
+    researchers and lifelong learners.
   </p>
-  <a class="button" href="#subjects">Explore Resources</a>
+  <div class="hero-links">
+    <a class="button" href="#bph">TU BPH Subjects</a>
+    <a class="button" href="#additional">Other Public Health Subjects</a>
+  </div>
 </div>
 
-<section id="subjects">
-  <h2 class="section-title">Browse by Subject</h2>
+<!-- TU BPH CURRICULUM -->
 
-  <div class="cards">
+<section id="bph">
+<h2 class="section-title">TU Bachelor of Public Health (BPH)</h2>
 
-    <div class="card">
-      <h3>Basic Health Sciences</h3>
-      <p>Anatomy, Physiology, Biochemistry and Pharmacology.</p>
-      <p class="status">Study materials coming soon.</p>
-    </div>
+<h3 class="year-title">First Year – Foundation Subjects</h3>
+<div class="cards">
 
-    <div class="card">
-      <h3>Epidemiology</h3>
-      <p>Principles, disease patterns and epidemiological methods.</p>
-      <p class="status">Study materials coming soon.</p>
-    </div>
+<div class="card">
+<h3>1. Basic Science I</h3>
+<ul>
+<li>Anatomy</li>
+<li>Physiology</li>
+<li>Biochemistry</li>
+<li>Pathology</li>
+<li>Pharmacology and Toxicology</li>
+</ul>
+<p class="status">Study materials will be added.</p>
+</div>
 
-    <div class="card">
-      <h3>Biostatistics</h3>
-      <p>Statistical methods, probability and data analysis.</p>
-      <p class="status">Study materials coming soon.</p>
-    </div>
+<div class="card">
+<h3>2. Basic Science II</h3>
+<ul>
+<li>Microbiology</li>
+<li>Entomology and Rodentology</li>
+<li>First Aid and Safety</li>
+</ul>
+<p class="status">Study materials will be added.</p>
+</div>
 
-    <div class="card">
-      <h3>Environmental Health</h3>
-      <p>Water, sanitation, waste management and environmental health.</p>
-      <p class="status">Study materials coming soon.</p>
-    </div>
+<div class="card">
+<h3>3. Biostatistics</h3>
+<ul>
+<li>Descriptive statistics</li>
+<li>Probability</li>
+<li>Sampling methods</li>
+<li>Hypothesis testing</li>
+<li>Correlation and regression</li>
+</ul>
+<p class="status">Study materials will be added.</p>
+</div>
 
-    <div class="card">
-      <h3>Food and Nutrition</h3>
-      <p>Nutrition science, food hygiene and nutritional programmes.</p>
-      <p class="status">Study materials coming soon.</p>
-    </div>
+<div class="card">
+<h3>4. Population Studies and Informatics</h3>
+<ul>
+<li>Demography</li>
+<li>Population dynamics</li>
+<li>Census and vital statistics</li>
+<li>Health information systems</li>
+</ul>
+<p class="status">Study materials will be added.</p>
+</div>
 
-    <div class="card">
-      <h3>Primary Health Care</h3>
-      <p>PHC, health promotion and community health.</p>
-      <p class="status">Study materials coming soon.</p>
-    </div>
+<div class="card">
+<h3>5. Food and Nutrition</h3>
+<ul>
+<li>Basic nutrition</li>
+<li>Nutrients and their functions</li>
+<li>Nutritional assessment</li>
+<li>Community nutrition</li>
+<li>Food hygiene</li>
+</ul>
+<p class="status">Study materials will be added.</p>
+</div>
 
-    <div class="card">
-      <h3>Demography and Health Informatics</h3>
-      <p>Population studies, health information and vital statistics.</p>
-      <p class="status">Study materials coming soon.</p>
-    </div>
+<div class="card">
+<h3>6. Environmental Health I</h3>
+<ul>
+<li>Water and sanitation</li>
+<li>Air and noise pollution</li>
+<li>Housing and ventilation</li>
+<li>Solid waste management</li>
+<li>Environmental sanitation</li>
+</ul>
+<p class="status">Study materials will be added.</p>
+</div>
 
-    <div class="card">
-      <h3>Other Academic Resources</h3>
-      <p>Guidelines, presentations, reports and reference materials.</p>
-      <p class="status">Study materials coming soon.</p>
-    </div>
+<div class="card">
+<h3>7. Public Health and Primary Health Care</h3>
+<ul>
+<li>Principles of public health</li>
+<li>Primary health care</li>
+<li>Health promotion</li>
+<li>Disease prevention</li>
+<li>Health systems and services</li>
+</ul>
+<p class="status">Study materials will be added.</p>
+</div>
 
-  </div>
+</div>
+
+<h3 class="year-title">Second Year – Intermediate Public Health</h3>
+<div class="cards">
+
+<div class="card">
+<h3>8. Family Health I</h3>
+<p>Family health, maternal health, reproductive health, family planning and life-cycle approaches.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>9. Health Promotion and Education I</h3>
+<p>Health education, communication, behaviour change and health promotion principles.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>10. Epidemiology I</h3>
+<p>Basic epidemiology, disease distribution, measures of disease frequency and epidemiological study designs.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>11. Environmental Health and Occupational Health II</h3>
+<p>Advanced environmental health, occupational hazards, workplace safety and prevention.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>12. Medical Sociology and Anthropology</h3>
+<p>Society, culture, social determinants of health, health beliefs and health-seeking behaviour.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>13. Public Health Administration and Management I</h3>
+<p>Management principles, planning, organisation, leadership and health service administration.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>Community Health Diagnosis</h3>
+<p>Residential field practice, community assessment, health problem identification and prioritisation.</p>
+<p class="status">Field reports and resources will be added.</p>
+</div>
+
+</div>
+
+<h3 class="year-title">Third Year – Applied Public Health</h3>
+<div class="cards">
+
+<div class="card">
+<h3>14. Family Health II</h3>
+<p>Advanced family health, maternal and child health, reproductive health and family health programmes.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>15. Health Promotion and Education II</h3>
+<p>Applied health education, communication strategies, programme planning and evaluation.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>16. Epidemiology II</h3>
+<p>Applied epidemiology, disease surveillance, outbreak investigation and epidemiological analysis.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>17. Health Economics and Health Financing</h3>
+<p>Health economics, health insurance, healthcare financing, cost analysis and resource allocation.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>18. School and Community Health</h3>
+<ul>
+<li>School health</li>
+<li>Mental health</li>
+<li>Oral health</li>
+<li>Primary eye care</li>
+<li>Primary ear and hearing care</li>
+</ul>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>19. Public Health Administration and Management II</h3>
+<p>Advanced health management, leadership, supervision, monitoring and evaluation.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>District Health Field Practice</h3>
+<p>District health system observation, fieldwork, programme implementation and health service management.</p>
+<p class="status">Field reports and resources will be added.</p>
+</div>
+
+</div>
+
+<h3 class="year-title">Fourth Year – Research and Professional Practice</h3>
+<div class="cards">
+
+<div class="card">
+<h3>20. Public Health Research Methodology and Project Planning and Development</h3>
+<p>Research methods, proposal writing, project planning, implementation and evaluation.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>21. Health System Management and International Health</h3>
+<p>Health systems, health policy, international health, global health and health sector management.</p>
+<p class="status">Study materials will be added.</p>
+</div>
+
+<div class="card">
+<h3>Individual Health Research</h3>
+<p>Research proposal, fieldwork, data analysis, dissertation writing and research presentation.</p>
+<p class="status">Research resources will be added.</p>
+</div>
+
+<div class="card">
+<h3>Comprehensive Public Health Practicum</h3>
+<p>Integrated public health practice, field experience, programme management and professional competencies.</p>
+<p class="status">Practicum resources will be added.</p>
+</div>
+
+</div>
+
+<div class="note">
+<strong>Note:</strong> This section represents the IOM/TU BPH curriculum outline.
+For examination preparation, students should also follow their
+official batch syllabus, prescribed course content and university updates.
+</div>
+</section>
+
+<!-- ADDITIONAL PUBLIC HEALTH SUBJECTS -->
+
+<section id="additional">
+<h2 class="section-title">Additional Public Health Learning Areas</h2>
+<p style="text-align:center;margin-bottom:30px;">
+Supplementary topics for students, researchers and public health professionals.
+These are additional learning areas, not a separate list of TU BPH course titles.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Epidemiology and Disease Control</h3>
+<ul>
+<li>Communicable disease epidemiology</li>
+<li>Non-communicable diseases</li>
+<li>Infectious disease control</li>
+<li>Outbreak investigation</li>
+<li>Disease surveillance</li>
+<li>Screening and prevention</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Maternal, Newborn and Child Health</h3>
+<ul>
+<li>Safe motherhood</li>
+<li>Antenatal and postnatal care</li>
+<li>Newborn health</li>
+<li>Child health and IMNCI</li>
+<li>Immunisation</li>
+<li>Adolescent health</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Reproductive and Sexual Health</h3>
+<ul>
+<li>Family planning</li>
+<li>Sexual health</li>
+<li>STIs and HIV/AIDS</li>
+<li>Reproductive rights</li>
+<li>Gender and health</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Nutrition and Food Safety</h3>
+<ul>
+<li>Public health nutrition</li>
+<li>Nutrition assessment</li>
+<li>Food fortification</li>
+<li>Food supplementation</li>
+<li>Food safety and hygiene</li>
+<li>Nutrition programmes</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Environmental and Occupational Health</h3>
+<ul>
+<li>Water quality and treatment</li>
+<li>Sanitation and hygiene</li>
+<li>Air and noise pollution</li>
+<li>Healthcare waste management</li>
+<li>Climate change and health</li>
+<li>Occupational safety</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Health Policy and Systems</h3>
+<ul>
+<li>National health policy</li>
+<li>Health system governance</li>
+<li>Universal health coverage</li>
+<li>Health insurance</li>
+<li>Health financing</li>
+<li>Health sector reform</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Research and Data Science</h3>
+<ul>
+<li>Research methodology</li>
+<li>Qualitative research</li>
+<li>Quantitative research</li>
+<li>SPSS and data analysis</li>
+<li>Scientific writing</li>
+<li>Systematic reviews</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Monitoring and Evaluation</h3>
+<ul>
+<li>Health indicators</li>
+<li>Logical framework</li>
+<li>Programme monitoring</li>
+<li>Impact evaluation</li>
+<li>Health programme assessment</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Disaster and Emergency Health</h3>
+<ul>
+<li>Disaster risk management</li>
+<li>Emergency preparedness</li>
+<li>Mass casualty management</li>
+<li>Public health emergencies</li>
+<li>Humanitarian health response</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Mental Health and Psychosocial Health</h3>
+<ul>
+<li>Community mental health</li>
+<li>Mental health promotion</li>
+<li>Substance use prevention</li>
+<li>Psychosocial support</li>
+<li>Mental health policy</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Global and International Health</h3>
+<ul>
+<li>Global health challenges</li>
+<li>International health regulations</li>
+<li>SDGs and health</li>
+<li>Migration and health</li>
+<li>Health security</li>
+<li>One Health</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Social and Behavioural Sciences</h3>
+<ul>
+<li>Social determinants of health</li>
+<li>Health behaviour</li>
+<li>Health communication</li>
+<li>Gender and social inclusion</li>
+<li>Health inequalities</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Digital Health and Informatics</h3>
+<ul>
+<li>Electronic health records</li>
+<li>Health information systems</li>
+<li>Digital health technologies</li>
+<li>Telemedicine</li>
+<li>GIS in public health</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Health Law and Ethics</h3>
+<ul>
+<li>Public health legislation</li>
+<li>Medical ethics</li>
+<li>Research ethics</li>
+<li>Patient rights</li>
+<li>Confidentiality and consent</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Community Development</h3>
+<ul>
+<li>Community participation</li>
+<li>Community mobilisation</li>
+<li>Social accountability</li>
+<li>Local health planning</li>
+<li>Community-based interventions</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>One Health and Planetary Health</h3>
+<ul>
+<li>Human-animal-environment interface</li>
+<li>Zoonotic diseases</li>
+<li>Antimicrobial resistance</li>
+<li>Environmental sustainability</li>
+<li>Planetary health</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- RESOURCES -->
+
+<section id="resources">
+<h2 class="section-title">Library Resources</h2>
+<div class="cards">
+
+<div class="card">
+<h3>Study Notes and PDFs</h3>
+<p>Subject-wise notes, exam preparation materials and reference documents.</p>
+</div>
+
+<div class="card">
+<h3>Presentations</h3>
+<p>Academic presentations, lecture slides and seminar materials.</p>
+</div>
+
+<div class="card">
+<h3>Guidelines and Protocols</h3>
+<p>WHO, Government of Nepal and other recognised public health guidelines.</p>
+</div>
+
+<div class="card">
+<h3>Research and Publications</h3>
+<p>Research articles, reports, dissertations and academic publications.</p>
+</div>
+
+<div class="card">
+<h3>Past Questions and Practice</h3>
+<p>Past examination questions, model questions and practice papers.</p>
+</div>
+
+<div class="card">
+<h3>Books and Reference Materials</h3>
+<p>Recommended reading lists and legally shareable reference resources.</p>
+</div>
+
+</div>
+
+<div class="note">
+<strong>Resource availability:</strong> Subject categories are organised.
+PDFs and other learning materials will be added progressively.
+Online reading and download links will appear when individual
+resources are uploaded.
+</div>
 </section>
 
 <footer>
-  © 2026 Uttam Raj Joshi. Digital Library.
+<p>© 2026 Uttam Raj Joshi. Digital Library.</p>
+<p>Knowledge | Learning | Public Health</p>
 </footer>
 
 </body>
